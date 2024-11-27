@@ -14,7 +14,7 @@ public class TestUtilTest { //테스트 유틸도 TDD방식으로.
     public void t1() {
         Scanner scanner = TestUtil.getScanner("""
                 등록
-                나의 죽음을 적에게 알리지 말라.
+                나의 죽음을 적에게 알리지 말라!
                 이순신
                 """.stripIndent().trim());
         String cmd = scanner.nextLine();
@@ -29,12 +29,13 @@ public class TestUtilTest { //테스트 유틸도 TDD방식으로.
 
         @Test
         @DisplayName("TestUtil.setOutToByteArray()")
-        public void t1(){
-            ByteArrayOutputStream bytearrayOutputStream = TestUtil.setOutToByteArray();
+        public void t2(){
+            ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
+
             System.out.println("2 / 이순신 / 나의 죽음을 적에게 알리지 말라!");
 
-            String out = bytearrayOutputStream.toString().trim();
-            TestUtil.clearSetOutToByteArray(bytearrayOutputStream);
+            String out = byteArrayOutputStream.toString().trim();
+            TestUtil.clearSetOutToByteArray(byteArrayOutputStream);
 
             assertThat(out).isEqualTo("2 / 이순신 / 나의 죽음을 적에게 알리지 말라!");
             System.out.println("이제는 화면에 출력 됩니다.");
