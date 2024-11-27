@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class TestUtilTest { //테스트 유틸도 TDD방식으로.
     @Test
-    @DisplayName("IOUtil.genScanner()")
+    @DisplayName("TestUtil.setOutToByteArray()")
     public void t1() {
         Scanner scanner = TestUtil.getScanner("""
                 등록
